@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <styles> 
+    <style>
         body {
             background-color: #d3d3d3;
             font-family: "Comic Sans MS", cursive;
@@ -52,9 +52,8 @@
             margin-top: 15px;
             cursor: pointer;
         }
-    </styles>
+    </style>
     <script>
-
 function verifyMinimumWords() {
     const input = document.getElementById("inputText");
     const text = input.value.trim();
@@ -75,14 +74,13 @@ function verifyMinimumWords() {
         return false;
     }
 }
-
     </script>
 </head>
 <body>
     <form action="">
         <h1>Verify you are a human!</h1>
         <label for="">Now, explain to me in 500 words why should I trust you to be a human</label>
-        <input type="text" id="inputText">
+        <textarea id="inputText"></textarea>
         <input type="button" value="send" onclick="verifyMinimumWords()">
     </form>
 </body>
