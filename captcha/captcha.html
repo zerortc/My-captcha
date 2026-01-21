@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+
+function verifyMinimumWords() {
+    const input = document.getElementById("inputText");
+    const text = input.value.trim();
+    
+    if (text === "") {
+        alert("The field is empty, you are AI");
+        return false;
+    }
+    
+    const words = text.split(/\s+/).filter(word => word.length > 0);
+    const wordCount = words.length;
+    
+    if (wordCount >= 500) {
+        alert(`you wrote ${wordCount} words, I'm still thinking you are AI but I'll let you go for now`);
+        return true;
+    } else {
+        alert(`mmmm not enough dude`);
+        return false;
+    }
+}
+
+    </script>
+</head>
+<body>
+    <form action="">
+        <h1>Verify you are a human!</h1>
+        <label for="">Now, explain to me in 500 words why should I trust you to be a human</label>
+        <input type="text" id="inputText">
+        <input type="button" value="send" onclick="verifyMinimumWords()">
+    </form>
+</body>
+</html>
